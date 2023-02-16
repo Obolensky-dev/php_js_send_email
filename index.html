@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Send Mail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="libs/bootstrap-reboot/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="./libs/owlcarusel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./libs/owlcarusel2/assets/owl.theme.ltg.min.css">
+    <link rel="stylesheet" type="text/css" href="./libs/fancybox3/jquery.fancybox.min.css">
+    
+	
+</head>
+<body>
+
+	<section class="services" class="general-container" id="services">
+
+	<div  class="container">
+	<div class="heading">
+		<div class="general-heading">
+				<p>Услуги</p>
+		</div>
+		<div class="secondary-heading">
+				<p>Записатся на любой вид услуг</p>
+		</div>
+
+	</div>
+	
+	<div class="service_box--wrapper">	
+		
+		<div class="service_box">
+			<a data-fancybox data-animation-duration="700" data-src="#registration" href="javascript:;" class="btn btn-primary">
+				<div class="img_service_box">
+					<img src="../../img/bkg/5.jpg" alt="">
+				</div>
+				<div class="text_box_service_box">
+					<h2>Ремонт</h2>
+					<div class="btn_service_box">
+					Записаться
+				</div>
+				</div>
+			</a>
+		</div>
+		
+
+        <div class="service_box">
+			<a data-fancybox data-animation-duration="700" data-src="#registration" href="javascript:;" class="btn btn-primary">
+				<div class="img_service_box">
+					<img src="../../img/bkg/4.jpg" alt="">
+				</div>
+				<div class="text_box_service_box">
+					<h2>Диагностика</h2>
+					<div class="btn_service_box">
+					Записаться
+				</div>
+				</div>
+			</a>
+		</div>
+	
+        <div class="service_box">
+			<a data-fancybox data-animation-duration="700" data-src="#registration" href="javascript:;" class="btn btn-primary">
+				<div class="img_service_box">
+					<img src="../../img/bkg/1.jpg" alt="">
+				</div>
+				<div class="text_box_service_box">
+					<h2>Техническое обслуживание</h2>
+					<div class="btn_service_box" id="btn_service_box">
+					Записаться
+				</div>
+				</div>
+			</a>
+		</div>
+
+        <div class="service_box">
+			<a data-fancybox data-animation-duration="700" data-src="#registration" href="javascript:;" class="btn btn-primary">
+				<div class="img_service_box">
+					<img src="../../img/bkg/2.jpg" alt="">
+				</div>
+				<div class="text_box_service_box">
+					<h2>Ремонт</h2>
+					<div class="btn_service_box">
+					Записаться
+				</div>
+				</div>
+			</a>
+		</div>
+		
+		<div style="display: none;" id="registration" class="animated-modal">
+          <h2>Запись в техцентр:</h2>
+
+          <!--Данные введенные пользователем обрабатываются кодом в mail.php-->
+			<form>
+			    <!--Тег используется для группировки связанных элементов в форме-->
+			    <fieldset>
+			        <!--Тег задает заголовок для групповых элементов-->
+			        Ваше имя:
+			        <!--Устанавливает однострочное текстовое поле ввода:-->
+			        <input type="text" name="name" id="name"> </br> </br>
+			        <!--Используется для полей ввода, которые должны содержать адрес электронной почты.-->
+			        E-mail:
+			        <input type="text" name="email" id="email"> </br> </br>
+			        Номер телефона:
+			        <input type="text" name="phone" id="phone"> </br> </br>
+			        Комментарий: </br>
+			        <!--Тег разрешает многострочный ввод текста.-->
+			        <!--Текстовая область может содержать неограниченное количество символов-->
+			        <textarea rows="3" cols="35" name="message" id="message"></textarea> </br>
+			        <!--Устанавливает кнопку для отправки данных формы в обработчик формы.-->
+			        <input type="button" name="submit" id="submit" value="Отправить" onClick = "sendmail()" />
+			    </fieldset>
+			</form>
+			</br>
+			<div id="msg"></div>
+        </div>
+
+</section>
+
+
+
+    <script src="./libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./libs/fancybox3/jquery.fancybox.min.js"></script> 
+	<script src="./js/sendmail.js"></script>
+    
+</body>
+</html>
